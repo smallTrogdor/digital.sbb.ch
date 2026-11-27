@@ -45,6 +45,9 @@
 
     {% if layout == "component.njk" %}
     <script src="{{ '/assets/js/mode-toggle.js' | assetHash }}" defer></script>
+    {% if 'flutter-demo' in content %}
+    <script src="{{ '/assets/js/flutter-demos.js' | assetHash }}" defer></script>
+    {% endif %}
     <script src="{{ '/assets/js/sidebar.js' | assetHash }}" defer></script>
     <script src="{{ '/assets/js/component-browser.js' | assetHash }}" defer></script>
     {# highlight.js nur laden, wenn die Seite Codeblöcke oder Storybook-Beispiele (HTML-Snippets) enthält #}

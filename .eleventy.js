@@ -17,6 +17,7 @@ module.exports = async function(eleventyConfig) {
 
     const macroNames = [
         "imageWithMode",
+        "flutterDemo",
         "imageOnGreyBackground",
         "imageSpec",
         "principleImage",
@@ -79,7 +80,7 @@ module.exports = async function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({ 'src/googlec598c9eee38cf153.html': '/googlec598c9eee38cf153.html' });
 
     eleventyConfig.addPreprocessor("macro-inject", ".njk,.md", (data, content) => {
-        return `{% from "src/_includes/macros/index.njk" import imageWithMode, imageOnGreyBackground, principleImage, svgImage, webpImage, buttonGroup, specificationLinks, imageSpec, lynePlayground, lyneExamples, lyneComponentLinks %}\n` + content;
+        return `{% from "src/_includes/macros/index.njk" import imageWithMode, flutterDemo, imageOnGreyBackground, principleImage, svgImage, webpImage, buttonGroup, specificationLinks, imageSpec, lynePlayground, lyneExamples, lyneComponentLinks %}\n` + content;
     });
     eleventyConfig.addWatchTarget("src/assets/css/**/*.scss");
     eleventyConfig.addWatchTarget("dist/assets/css/**/*.css");

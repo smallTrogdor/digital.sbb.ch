@@ -1,0 +1,21 @@
+name: sbb_flutter_demos
+description: Live SBB Design System Mobile demos embedded in digital.sbb.ch.
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.13.0
+  flutter: '>=3.47.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  # https://pub.dev/packages/material_ui
+  material_ui: ^1.11.0
+
+  # Prototype: local checkout. Switch to the pub.dev release once the demos are settled.
+  sbb_design_system_mobile:
+    path: ../../oss/design_system_flutter
+
+dev_dependencies:
+  flutter_lints: ^6.0.0

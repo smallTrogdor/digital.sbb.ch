@@ -195,6 +195,24 @@ code:not([class]) {
   }
 }
 
+// Live Flutter-Demo: Bilder bleiben sichtbar, bis flutter-demos.js die View eingefügt hat
+.flutter-demo {
+  .flutter-demo-view {
+    display: none;
+    block-size: var(--flutter-demo-height);
+  }
+
+  &.is-live {
+    figure {
+      display: none;
+    }
+
+    .flutter-demo-view {
+      display: block;
+    }
+  }
+}
+
 .boxed-component {
   max-inline-size: 100%;
   padding: var(--sbb-spacing-fixed-6x);

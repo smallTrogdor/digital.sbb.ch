@@ -22,7 +22,9 @@ The component has the following variants: {.lead}
 
 ### Checkbox
 #### without icon
-{{ imageWithMode({
+{{ flutterDemo({
+  demo: 'checkbox/default',
+  height: 160,
   url: '/assets/images/mobile/checkbox-default',
   alt: 'Image of the checkbox, without icon',
   title: 'checkbox, without icon'
